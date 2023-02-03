@@ -1,0 +1,147 @@
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/fonts/Inter-VariableFont_slnt\,wght.ttf");
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Inter", sans-serif;
+}
+
+main {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 4rem;
+}
+
+nav span {
+  cursor: pointer;
+}
+
+nav span:hover {
+  color: hsl(5, 85%, 63%);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav {
+  display: flex;
+  gap: 18px;
+}
+
+section {
+  display: flex;
+  margin-top: 3rem;
+  gap: 28px;
+}
+
+.main-content {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.main-content img {
+  width: 100%;
+}
+
+.main-content-others {
+  display: flex;
+  gap: 18px;
+}
+
+.main-content-others > * {
+  flex-basis: 50%;
+  padding: 28px;
+}
+
+.main-content-others span {
+  color: hsl(240, 100%, 5%);
+  font-size: 3em;
+  font-weight: 800;
+}
+
+.news {
+  padding: 1rem;
+  background-color: hsl(240, 100%, 5%);
+  height: 100%;
+}
+
+.news-content-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.news h2 {
+  color: hsl(35, 77%, 62%);
+  font-size: 36px;
+}
+
+.news-content span {
+  color: hsl(36, 100%, 99%);
+  font-size: 18px;
+}
+
+.news-content span:hover {
+  color: hsl(35, 77%, 62%);
+  cursor: pointer;
+}
+
+.news-content p {
+  color: hsl(236, 13%, 42%);
+  font-size: 14px;
+}
+
+.bordered-news {
+  border-top: 1px solid hsl(236, 13%, 42%);
+  border-bottom: 1px solid hsl(236, 13%, 42%);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  margin-bottom: 1rem;
+}
+
+.read-more {
+  padding: 1rem;
+}
+
+.read-more p {
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.read-more button {
+  font-size: 14px;
+  color: hsl(36, 100%, 99%);
+  background-color: hsl(240, 100%, 5%);
+  padding: 8px 18px;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+  main {
+    padding: 12px;
+  }
+  section {
+    flex-direction: column;
+  }
+  .main-content-others {
+    flex-direction: column;
+    gap: 0;
+  }
+  .main-content-others > * {
+    padding: 6px;
+  }
+  nav {
+    display: none;
+  }
+  .read-more button {
+    background-color: hsl(5, 85%, 63%);
+  }
+}

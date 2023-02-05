@@ -87,6 +87,7 @@ section {
 .news {
   padding: 1rem;
   background-color: hsl(240, 100%, 5%);
+  height: min-content;
 }
 
 .news-content-container {

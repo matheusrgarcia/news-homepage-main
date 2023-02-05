@@ -3,16 +3,24 @@
   src: url("../assets/fonts/Inter-VariableFont_slnt\,wght.ttf");
 }
 
-html,
-body {
+body,
+html {
   height: 100%;
+  width: 100%;
   font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
 }
 
 main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   max-width: 1440px;
   margin: 0 auto;
-  padding: 4rem;
+  padding: 0 4rem;
 }
 
 nav span {
@@ -35,8 +43,15 @@ nav {
 
 section {
   display: flex;
+  flex-direction: column;
   margin-top: 3rem;
   gap: 28px;
+}
+
+.flex-row {
+  display: grid;
+  gap: 28px;
+  grid-template-columns: 2fr 1fr;
 }
 
 .main-content {
@@ -68,7 +83,6 @@ section {
 .news {
   padding: 1rem;
   background-color: hsl(240, 100%, 5%);
-  height: 100%;
 }
 
 .news-content-container {
@@ -115,13 +129,51 @@ section {
 }
 
 .read-more button {
-  font-size: 14px;
+  font-size: 0.8em;
   color: hsl(36, 100%, 99%);
-  background-color: hsl(240, 100%, 5%);
-  padding: 8px 18px;
+  background-color: hsl(5, 85%, 63%);
+  padding: 12px 23px;
   text-transform: uppercase;
   border: none;
   cursor: pointer;
+}
+
+.ranking-news {
+  gap: 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.ranking-item {
+  display: flex;
+  height: 160px;
+}
+
+.ranking-item img {
+  height: 100%;
+}
+
+.ranking-details {
+  display: flex;
+  flex-direction: column;
+  padding-left: 16px;
+  gap: 12px;
+}
+
+.ranking-details p {
+  color: hsl(236, 13%, 42%);
+  padding: 0;
+  margin: 0;
+}
+
+.ranking-big-number {
+  font-size: 2em;
+  color: hsl(233, 8%, 79%);
+}
+
+.ranking-title {
+  color: hsl(240, 100%, 5%);
+  font-weight: 800;
 }
 
 @media screen and (max-width: 800px) {
@@ -130,6 +182,14 @@ section {
   }
   section {
     flex-direction: column;
+  }
+  body,
+  html {
+    height: fit-content;
+  }
+
+  .flex-row {
+    grid-template-columns: 1fr;
   }
   .main-content-others {
     flex-direction: column;
@@ -141,7 +201,8 @@ section {
   nav {
     display: none;
   }
-  .read-more button {
-    background-color: hsl(5, 85%, 63%);
+
+  .ranking-news {
+    grid-template-columns: 1fr;
   }
 }

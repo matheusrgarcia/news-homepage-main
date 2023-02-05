@@ -18,12 +18,28 @@
     />
 
     <title>Frontend Mentor | News homepage</title>
+    <script type="text/javascript" src="./script.js"></script>
   </head>
-  <body>
+  <body id="body">
     <main>
       <header>
         <img src="../assets/images/logo.svg" />
-        <nav>
+        <span class="mobile-menu-button" onclick="showMobileMenu()">
+          <img src="../assets/images/icon-menu.svg" />
+        </span>
+        <div class="mobile-nav-container">
+          <nav>
+            <span class="mobile-menu-button" onclick="hideMobileMenu()">
+              <img src="../assets/images/icon-menu-close.svg" />
+            </span>
+            <span>Home</span>
+            <span>New</span>
+            <span>Popular</span>
+            <span>Trending</span>
+            <span>Categories</span>
+          </nav>
+        </div>
+        <nav class="desktop-nav">
           <span>Home</span>
           <span>New</span>
           <span>Popular</span>
